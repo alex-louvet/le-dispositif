@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Gagalin";
+    src: local("Gagalin"), url(~static/Gagalin/gagalin.woff) format("woff");}
+
+body {
+  background-image: linear-gradient(#EB661B, #EB661B 210px, #ffa971);
+  font-family: 'Gagalin';
+  height: max(100vh, 100%);
+  min-height: 100%;
+}
+
+html {
+  min-height: 100%;
+}
