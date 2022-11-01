@@ -68,6 +68,7 @@ export default {
   display: inline-block;
   padding-top: 10px;
   width: min(98%, 500px);
+  max-height: 160px;
 }
 
 .timer-background {

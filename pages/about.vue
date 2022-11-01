@@ -24,12 +24,14 @@ export default {
     margin-right: auto;
     margin-left: auto;
     margin-top: 20px;
+    overflow: scroll;
+    margin-bottom: 75px;
 }
 
 .credits {
     color: white;
     background-color: #424242;
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     right: 0px;
     padding-left: 10px;
