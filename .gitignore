@@ -90,3 +90,4 @@ sw.*
 *.swp
 
 middleware/api/token.js
+deploy.sh
