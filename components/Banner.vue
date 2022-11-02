@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="banner">
-      <img src="../static/banner.png" alt="Le Dispositif">
+      <router-link to="/"><img src="../static/banner.png" alt="Le Dispositif"></router-link>
     </div>
     <div class="timer-background">
       <span class="timer">{{ timer.days }}j {{ timer.hours }}h {{ timer.minutes }}min {{ timer.seconds }}s avant le prochain podcast</span>

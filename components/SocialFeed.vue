@@ -4,7 +4,7 @@
             <iframe frameborder="0" loading="lazy" id="ausha-2UFu" style="border: none; width:100%" :src="podcastSrc"></iframe>
 
             <ul class="podcast-list">
-                <li v-for="podcast in podcastList" :key="podcast.index" @click="podcastId = podcast.link">{{podcast.title}}</li>
+                <li v-for="podcast in podcastList" :key="podcast.index" @click="podcastId = podcast.link" :style="computeStyle(podcast.link)">{{podcast.title}}</li>
             </ul>
             <a :href="deezerUrl" target="_blank"><img src="../static/deezer_small.png" alt="Deezer" width="130px"></a>
             <a :href="spotifyUrl" target="_blank"><img src="../static/spotify_small.png" alt="Spotify" width="100px"></a>
@@ -49,6 +49,12 @@ export default {
         }
     },
     methods: {
+        computeStyle(podcastlink){
+            if (podcastlink == this.podcastId){
+                return {backgroundColor: '#eb661b', textDecoration: 'underline'}
+            } 
+            return {}
+        },
         async getLastPodcastId(){
             try{
                 let res = await axios.get('/api/ausha/y0kM2IkYmzQ9')
@@ -142,6 +148,10 @@ export default {
 
 .podcast-list li:hover {
     cursor: pointer;
+}
+
+.selected-podcast {
+    background-color: #eb661b;
 }
 
 .instagram-container {
