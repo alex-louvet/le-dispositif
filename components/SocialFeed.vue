@@ -137,13 +137,14 @@ export default {
     list-style-type: none;
     height: 200px;
     overflow: scroll;
-    margin-left: 10px;
     margin-right: 10px;
+    margin-left: 10px;
     padding-left: 0;
 }
 
 .podcast-list li{
     border: 1px solid white;
+    padding: 5px;
 }
 
 .podcast-list li:hover {
@@ -323,7 +324,7 @@ export default {
     }
 }
 
-@media (max-width: 525px) {
+@media (max-width: 525px) and (min-width: 378px){
     .podcast-container {
         width:98%;
         padding-left: 0;
@@ -345,6 +346,52 @@ export default {
     }
     .insta-logo:hover {
         padding: 100px;
+    }
+
+    .link-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 315px repeat(4,100px);
+        width: calc(98% - 20px);
+        margin-left: auto;
+        margin-right: auto;
+        height: 785px;
+    }
+
+    .link-container iframe {
+        grid-row-end: 2;
+        grid-column-end: 2;
+    }
+}
+
+@media (max-width: 377px) {
+    .podcast-container {
+        width:98%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .podcast-container iframe {
+        height: 500px;
+    }
+
+    .instagram-container {
+        width: 98%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .insta-image {
+        width: calc(90vw - 10px);
+        height: calc(90vw - 10px);
+    }
+    .insta-image:hover {
+        width: calc(90vw - 10px);
+        height: calc(90vw - 10px);
+        cursor: pointer;
+
+    }
+    .insta-logo:hover {
+        display: none;
     }
 
     .link-container {
