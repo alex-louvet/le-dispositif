@@ -11,6 +11,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Le Dispositif, basé sur Caen, à la radio, en Podcast ou sur vos réseaux sociaux' },
+      { name: 'keywords', content: 'dispositif, podcast, caen, radio, 666'},
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
